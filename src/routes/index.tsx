@@ -10,11 +10,7 @@ export const routes = createBrowserRouter([
     path: '/',
     element: <BaseLayout />,
     children: [
-      {
-        path: '', 
-        element: <PublicLayout />,
-        children: publicRoutes 
-      },
+      ...publicRoutes,
       ...privateRoutes
     ]
   },
